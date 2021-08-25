@@ -1,0 +1,180 @@
+<html>  
+  
+  <script>
+
+    var englishText= "Harry Potter is a series of seven fantasy novels written by British author JK Rowling. The novels chronicle the lives of a young wizard, Harry Potter, and his friends Hermione Granger and Ron Weasley, all of whom are students at Hogwarts School of Witchcraft and Wizardry. The main story arc concerns Harry's struggle against Lord Voldemort, a dark wizard who intends to become immortal, overthrow the wizard governing body known as the Ministry of Magic and subjugate all wizards and Muggles (non-magical people)."
+
+     var translatedText= "Harry Potter est une série de sept romans fantastiques écrits par l'auteur britannique JK Rowling. Les romans racontent la vie d'un jeune sorcier, Harry Potter, et de ses amis Hermione Granger et Ron Weasley, tous étudiants à l'école de sorcellerie et de sorcellerie de Poudlard. L'arc de l'histoire principale concerne la lutte de Harry contre Lord Voldemort, un sorcier noir qui a l'intention de devenir immortel, de renverser l'instance dirigeante des sorciers connue sous le nom de ministère de la Magie et de subjuguer tous les sorciers et moldus (personnes non magiques)."
+
+window.onload = function setOriginalText(){
+
+      document.getElementById("div0").innerHTML = englishText;
+    
+    }
+
+    function myfunction1(){
+
+
+      var div1Split = englishText.split(' '); 
+
+      document.getElementById("div4").innerHTML = div1Split;
+
+
+
+      //var div2=  document.getElementById("text2").innerHTML;
+
+      //var div2Split = div2.split('. '); 
+ }
+
+    function searchText(){ 
+
+        var findText = /Harry/i;
+
+        var result = englishText.match(findText);
+
+        var result2 = translatedText.match(findText);
+
+        if(result != null && result2 != null){
+
+          console.log("we found the word in the English Text here");
+
+          console.log(result)
+
+          console.log("we found the word in the translated Text here");
+
+          console.log(result2)
+
+        }else{
+
+          console.log("not found")
+        }
+
+      var match = /Harry/.exec(englishText);
+
+          if (match) {
+
+      console.log("match found at " + match.index);
+}
+     
+     document.getElementById("div0").style.color = "blue";
+
+
+      //const regex1 = /Harry/;
+      //const regex2 = new RegExp('Harry');
+
+      //console.log(regex1);
+// expected output: /\w+/
+
+      //console.log(regex2);
+// expected output: /\w+/
+
+      //console.log(regex1 === regex2);
+// expected output: false
+
+
+    }
+
+
+    //break it down by word in an array then use regex...? interesting 
+
+      /*
+
+      var div1=  document.getElementById("text1").innerHTML;
+
+      var div1Split = div1.split('. '); 
+
+      alert(div1Split[1]);
+
+      var div2=  document.getElementById("text2").innerHTML;
+
+      var div2Split = div2.split('. '); 
+
+      alert(div2Split[1]);
+
+      //alert("hi");
+
+      */
+
+
+    /* ------------READING LINKS
+
+https://keep.google.com/u/0/#label/1%20long%20document%20organize
+https://www.freecodecamp.org/news/15-web-developer-portfolios-to-inspire-you-137fb1743cae/
+https://www.google.com/search?q=timer&oq=timer&aqs=chrome..69i57.2748j0j7&sourceid=chrome&ie=UTF-8
+https://www.npmjs.com/package/google-translate-api
+https://medium.com/star-gazers/10-exciting-web-development-projects-for-your-portfolio-662768478263
+https://github.com/matheuss/google-translate-api
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
+https://stackoverflow.com/questions/33203173/change-innerhtml-on-button-click
+https://www.w3schools.com/jsref/event_onload.asp
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp
+https://stackoverflow.com/questions/4967369/what-does-i-at-the-end-of-a-regex-mean
+https://stackoverflow.com/questions/2295657/return-positions-of-a-regex-match-in-javascript
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec
+https://www.w3schools.com/js/js_htmldom_css.asp
+https://stackoverflow.com/questions/27015231/inserting-variable-into-html-page-with-innerhtml-on-page-load
+https://www.w3schools.com/css/css_border.asp
+file:///C:/Users/jpmai/Favorites/Desktop/languageTool.html
+https://www.codegrepper.com/code-examples/javascript/change+index+of+element+in+array+javascript
+
+
+
+    /*
+   
+
+  </script>
+
+  <style type="text/css">
+    
+    div{
+
+      border-style: solid; 
+      padding: 3px;
+    }
+  </style>
+  <body>     
+
+    <button onclick="myfunction1()"> myfunction1   </button>
+
+    <button onclick="searchText ()">searchText()  </button>
+
+    <div id="div0" onload="setOriginalText()"> 
+      
+    <h3> Original Text </h3>
+
+    <p id="originalText"> </p>
+
+    </div>
+
+    <div id="div1"> 
+      
+     <label for="fname">text1:</label>
+     <input type="text" id="text1" name="fname"> 
+      
+    </div>
+    
+    <div id= "div2"> 
+
+    <label for="fname">text2:</label>
+     <input type="text" id="text2" name="fname"> 
+
+      
+    </div>
+    
+      <div id= "div3"> 
+
+     <label for="fname">text3:</label>
+     <input type="text" id="fname" name="fname"> 
+
+      
+    </div>
+
+      <div id= "div4"> 
+
+      
+    </div>
+
+    
+  </body>
+  
+</html> 
